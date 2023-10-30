@@ -1,19 +1,72 @@
-public class User {
-    String id;
-    String email;
-    String password;
-    String accent;
-    String progress;
-    String tokens;
+import java.util.Scanner;
 
-    User(String id, String email, String password, String accent, String progress, String tokens, String string) { 
-        this.id=id;
-        this.email=email;
-        this.password=password;
-        this.accent=accent;
-        this.progress=progress;
-        this.tokens=tokens;
+public class User {
+    private int id=0;
+    private String email;
+    private String password;
+    private String accent;
+    private Progress progress;
+    private String tokens;
+    
+    User() { 
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter email: ");
+        this.email=sc.nextLine();
+        System.out.print("Enter password: ");
+        this.password=sc.nextLine();
+        this.id++;
+        // sc.close();
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getAccent() {
+        return accent;
+    }
+
+    public void setAccent(String accent) {
+        this.accent = accent;
+    }
+
+    public Progress getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Progress progress) {
+        this.progress = progress;
+    }
+
+    public String getTokens() {
+        return tokens;
+    }
+
+    public void setTokens(String tokens) {
+        this.tokens = tokens;
+    }
+
+
 
     void continueModule() {} 
 
