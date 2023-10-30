@@ -17,7 +17,7 @@ public class Chapter {
         AudioFile audioFile;
         Scanner sc=new Scanner(System.in);
         do{
-            System.out.println("1: Chapter 1 -> Easy Level \n2: Chapter 2 -> Medium Level \n3: Chapter 3 -> Hard Level \n4: Close");
+            System.out.println("\n1: Chapter 1 -> Easy Level \n2: Chapter 2 -> Medium Level \n3: Chapter 3 -> Hard Level \n4: Close");
             chapterChoice=sc.nextInt();
             switch(chapterChoice) {
                 case 1: 
@@ -36,7 +36,7 @@ public class Chapter {
                     repeatChapterChoice=false;                    
                 break;
                 default: 
-                    System.out.println("Wrong Choice !!! Enter again");
+                    System.out.println("\nWrong Choice !!! Enter again");
 
             }
         }while(repeatChapterChoice);

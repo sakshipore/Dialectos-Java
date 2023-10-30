@@ -12,9 +12,9 @@ public class Progress {
 
     void getProgress() {
         if (this.module.equals("")) {
-            System.out.println("No module completed !");
+            System.out.println("\nNo module completed !");
         } else {
-            System.out.println("Completed Module -> " + this.module);
+            System.out.println("\nCompleted Module -> " + this.module);
         }
 
     }

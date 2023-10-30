@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
 public class User {
-    private int id=0;
+    private int id = 0;
     private String email;
     private String password;
     private String accent;
     private Progress progress;
     private String tokens;
-    
-    User() { 
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter email: ");
-        this.email=sc.nextLine();
-        System.out.print("Enter password: ");
-        this.password=sc.nextLine();
+
+    User() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nEnter email: ");
+        this.email = sc.nextLine();
+        System.out.print("\nEnter password: ");
+        this.password = sc.nextLine();
         this.id++;
-        // sc.close();
+        progress = new Progress("", 0);
     }
 
     public int getId() {
@@ -66,11 +66,12 @@ public class User {
         this.tokens = tokens;
     }
 
+    void continueModule() {
+    }
 
+    void startNewModule() {
+    }
 
-    void continueModule() {} 
-
-    void startNewModule() {} 
-
-    void selectAccent() {}
+    void selectAccent() {
+    }
 }

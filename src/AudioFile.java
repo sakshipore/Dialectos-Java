@@ -10,16 +10,16 @@ public class AudioFile {
     }
 
     void playAudio() throws InterruptedException {
-        System.out.println("Playing audio...");
+        System.out.println("\nPlaying audio...");
         TimeUnit.SECONDS.sleep(2);
-        System.out.println("Audio completed !");
+        System.out.println("\nAudio completed !");
     } 
 
     void pauseAudio() {
-        System.out.println("Audio Paused");
+        System.out.println("\nAudio Paused");
     } 
 
     void resumeAudio() {
-        System.out.println("Replay Audio");
+        System.out.println("\nReplay Audio");
     }
 }

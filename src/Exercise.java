@@ -15,8 +15,8 @@ public class Exercise {
 
     void startExercise() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Give exercise...");
-        question = "Which of the following is a vowel ?";
+        System.out.println("\nGive exercise...");
+        question = "\nWhich of the following is a vowel ?";
         optionList = new ArrayList<>();
         optionList.add("f");
         optionList.add("w");
@@ -29,19 +29,19 @@ public class Exercise {
             System.out.println(ch + ": " + optionList.get(i));
         }
 
-        System.out.print("Enter your answer: ");
+        System.out.print("\nEnter your answer: ");
         this.answer = sc.nextLine();
         System.out.println(this.answer);
         if (this.answer.equals("a") || this.answer.equals("C")) {
-            System.out.println("Your answer is right !");
+            System.out.println("\nYour answer is right !");
         } else {
-            System.out.println("Your answer is wrong ");
+            System.out.println("\nYour answer is wrong ");
         }
     }
 
     void quitExercise() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Exercise Completed !");
+        System.out.println("\nExercise Completed !");
         Progress progress = new Progress(this.id, 5.0);
         progress.getProgress();
 

@@ -26,14 +26,14 @@ public class AuthorizeUser{
     }    
 
     void login() throws InterruptedException {
-        System.out.println("Logging in...");
+        System.out.println("\nLogging in...");
         TimeUnit.SECONDS.sleep(2);
-        System.out.println("User logged in with email: "+this.email);
+        System.out.println("\nUser logged in with email: "+this.email);
     } 
 
     void logout() throws InterruptedException {
-        System.out.println("Logging out...");
+        System.out.println("\nLogging out...");
         TimeUnit.SECONDS.sleep(2);
-        System.out.println("Logged out successfully !");
+        System.out.println("\nLogged out successfully !");
     }
 }

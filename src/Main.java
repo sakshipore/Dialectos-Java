@@ -19,41 +19,53 @@ public class Main {
         boolean repeatLeaderboardChoice = true;
 
         do {
-            System.out.println("1: Select Module \n2: Feedback \n3: Leaderboard \n4: Log Out");
+            System.out.println("\n1: Select Module \n2: Feedback \n3: Leaderboard \n4: Log Out");
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
                     do {
-                        System.out.println("1: American Module \n2: German Module \n3: Russian Module\n4: Close");
+                        System.out.println("\n1: American Module \n2: German Module \n3: Russian Module\n4: Close");
                         moduleChoice = sc.nextInt();
                         Module selectedModule;
                         switch (moduleChoice) {
                             case 1:
                                 selectedModule = new Module(
-                                        "AME", "Americal", "American learning accent", "");
+                                        "AME",
+                                        "Americal",
+                                        "American learning accent",
+                                        "",
+                                        user);
                                 selectedModule.startModule();
                                 break;
                             case 2:
                                 selectedModule = new Module(
-                                        "GER", "German", "German learning accent", "");
+                                        "GER",
+                                        "German",
+                                        "German learning accent",
+                                        "",
+                                        user);
                                 selectedModule.startModule();
                                 break;
                             case 3:
                                 selectedModule = new Module(
-                                        "RUS", "Russian", "Russian learning accent", "");
+                                        "RUS",
+                                        "Russian",
+                                        "Russian learning accent",
+                                        "",
+                                        user);
                                 selectedModule.startModule();
                                 break;
                             case 4:
                                 repeatModuleChoice = false;
                                 break;
                             default:
-                                System.out.println("Wrong Choice!!! Enter again");
+                                System.out.println("\nWrong Choice!!! Enter again");
                         }
                     } while (repeatModuleChoice);
                     break;
                 case 2:
                     do {
-                        System.out.println("1: Give Feedback \n2: Close");
+                        System.out.println("\n1: Give Feedback \n2: Close");
                         feedbackChoice = sc.nextInt();
                         switch (feedbackChoice) {
                             case 1:
@@ -65,25 +77,25 @@ public class Main {
                                 repeatFeedbackChoice = false;
                                 break;
                             default:
-                                System.out.println("Wrong Choice!!! Enter again");
+                                System.out.println("\nWrong Choice!!! Enter again");
                         }
                     } while (repeatFeedbackChoice);
 
                     break;
                 case 3:
                     do {
-                        System.out.println("1: View Leaderboard \n2: Close");
+                        System.out.println("\n1: View Leaderboard \n2: Close");
                         leaderboardChoice = sc.nextInt();
                         switch (leaderboardChoice) {
                             case 1:
-                                Leaderboard leaderboard = new Leaderboard(user.getEmail(), 0.0);
+                                Leaderboard leaderboard = new Leaderboard(user.getEmail(), user.getProgress().score);
                                 leaderboard.viewLeaderboard();
                                 break;
                             case 2:
                                 repeatLeaderboardChoice = false;
                                 break;
                             default:
-                                System.out.println("Wrong Choice!!! Enter again");
+                                System.out.println("\nWrong Choice!!! Enter again");
                         }
                     } while (repeatLeaderboardChoice);
 
@@ -92,6 +104,6 @@ public class Main {
                     authorizeUser.logout();
                     return;
             }
-        } while (choice < 3);
+        } while (choice < 5);
     }
 }

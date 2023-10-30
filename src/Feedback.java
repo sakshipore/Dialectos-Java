@@ -12,11 +12,11 @@ public class Feedback {
 
     void giveFeedback() {
         Scanner sc=new Scanner(System.in);
-        System.out.print("Please enter your feedback: ");
+        System.out.print("\nPlease enter your feedback: ");
         this.message=sc.nextLine();
     }
 
     void submitFeedback() {
-        System.out.println("Feedback submitted by user: "+this.user);
+        System.out.println("\nFeedback submitted by user: "+this.user);
     }
 }
