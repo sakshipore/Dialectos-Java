@@ -4,8 +4,8 @@ public class Main {
         User user=new User("abc", "abc","abc","abc","abc","abc","abc");
         System.out.println(user.id);
 
-        Module module=new Module("abc", "abc", "abc", "abc");
-        System.out.println(module.id);
+        Module module = new Module("12", "Module One");
+        System.out.println(module.getId());
 
         Exercise exercise=new Exercise("abc", "abc", "abc", "abc", "abc");
         System.out.println(exercise.id);
