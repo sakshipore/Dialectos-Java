@@ -19,12 +19,14 @@ public class Module {
         int options;
         boolean repeatOptions = true;
         Scanner sc = new Scanner(System.in);
+        Transition transition = Transition.getInstance();
         do {
             System.out.println("\n1: Select Chapter \n2: Give Exercise \n3: Close");
             options = sc.nextInt();
             switch (options) {
                 case 1:
                     Chapter chapter = new Chapter(this.id, this.name, this.description);
+                    transition.learningTransition();
                     chapter.startChapter();
                     // Add 5 points to user score
                     double score = user.getProgress().score;
@@ -32,6 +34,7 @@ public class Module {
                     break;
                 case 2:
                     Exercise exercise = new Exercise(this.id);
+                    transition.excerciseTransition();
                     exercise.startExercise();
                     // Add 10 points to user score
                     score = user.getProgress().score;
